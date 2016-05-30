@@ -105,7 +105,7 @@ int main() {
     cin >> nTestCases;
 
     // number of processors
-    const int nThreads = min(1, min(max(int(thread::hardware_concurrency()), 1), nTestCases));
+    const int nThreads = min(max(int(thread::hardware_concurrency()), 1), nTestCases);
 
     if (nThreads <= 1) {
         // sequential processing: less memory and useful for debugging
