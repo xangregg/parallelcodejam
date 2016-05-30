@@ -10,3 +10,5 @@ The main logic for handling synchronization issues:
 2. A fixed number of threads constantly fetch the next solver and run it.
 3. An `atomic<int>` is used to safely keep track for the next solver.
 4. All output is done sequentially when all solvers are done.
+
+When debugging, it can be useful to set `nThreads` to 1 which will cause the solvers to work sequentially without the work queue.
