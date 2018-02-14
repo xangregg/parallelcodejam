@@ -6,8 +6,8 @@ This code (harness.cpp) manages a work queue of solvers for coding competition p
 
 The main logic for handling synchronization issues:
 
-1. All the solvers are created and inputs are read sequentially before any paraller processing.
-2. A fixed number of threads constantly fetch the next solver and run it.
+1. All the solvers are created and inputs are read sequentially before any parallel processing.
+2. A fixed number of threads repeatedly fetch the next available solver and run it.
 3. An `atomic<int>` is used to safely keep track for the next solver.
 4. All output is done sequentially when all solvers are done.
 
